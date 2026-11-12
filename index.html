@@ -3,681 +3,975 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HeartSync India — Connect. Talk. Vibe.</title>
-<meta name="description" content="HeartSync India — a new space to connect, talk and meet new people. Launching 24 November 2026 at 7 PM.">
+
+<title>HeartSync India — Find Your People</title>
+
+<meta name="description" content="HeartSync India — A premium community to meet new people, make meaningful connections and discover your people.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
-
-:root{
-  --bg:#09070b;
-  --text:#f8f3f7;
-  --muted:#aaa0aa;
-  --line:rgba(255,255,255,.11);
-  --pink:#ff6fae;
-  --purple:#c47cff;
-}
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:
-    radial-gradient(circle at 75% 15%,rgba(255,105,170,.13),transparent 28%),
-    radial-gradient(circle at 15% 55%,rgba(160,90,255,.10),transparent 30%),
-    #09070b;
-  color:var(--text);
-  font-family:"DM Sans",sans-serif;
-  overflow-x:hidden;
+    background:#07070b;
+    color:#f7f5f8;
+    font-family:'DM Sans',sans-serif;
+    overflow-x:hidden;
 }
 
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.18;
-  background-image:
-    radial-gradient(rgba(255,255,255,.7) .6px,transparent .7px);
-  background-size:34px 34px;
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,rgba(219,86,173,.13),transparent 65%);
+    top:-180px;
+    right:-180px;
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:radial-gradient(circle,rgba(123,92,255,.10),transparent 65%);
+    bottom:-200px;
+    left:-180px;
+    pointer-events:none;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .container{
-  width:min(1120px,calc(100% - 36px));
-  margin:auto;
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+section{
+    position:relative;
 }
 
 /* NAV */
 
 nav{
-  position:relative;
-  z-index:5;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px 0;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:50;
+    padding:18px 0;
+    background:rgba(7,7,11,.68);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  font-weight:700;
+.nav-inner{
+    width:min(1120px,92%);
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.25);
-  background:#151016;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:-.4px;
 }
 
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.logo span{
+    color:#d987c4;
 }
 
 .nav-btn{
-  border:1px solid var(--line);
-  padding:9px 15px;
-  border-radius:999px;
-  font-size:12px;
-  color:#ddd5dc;
-  background:rgba(255,255,255,.035);
+    padding:10px 16px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.7px;
+    background:rgba(255,255,255,.04);
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    background:rgba(255,255,255,.09);
+    border-color:rgba(217,135,196,.45);
 }
 
 /* HERO */
 
 .hero{
-  min-height:calc(100vh - 88px);
-  display:grid;
-  place-items:center;
-  padding:35px 0 90px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:130px 0 70px;
+    position:relative;
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:65px;
-  align-items:center;
-  width:100%;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:60px;
 }
 
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:9px 14px;
-  background:rgba(255,255,255,.035);
-  color:#d6ced5;
-  font-size:10px;
-  letter-spacing:.13em;
-  text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:999px;
+    background:rgba(255,255,255,.035);
+    color:#cfc9d0;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    margin-bottom:25px;
 }
 
 .dot{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:var(--pink);
-  box-shadow:0 0 15px var(--pink);
+    width:6px;
+    height:6px;
+    background:#e49acf;
+    border-radius:50%;
+    box-shadow:0 0 15px #e49acf;
 }
 
 h1{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-  font-size:clamp(58px,8vw,104px);
-  line-height:.87;
-  letter-spacing:-.065em;
-  margin:28px 0 24px;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(55px,8vw,105px);
+    line-height:.92;
+    letter-spacing:-4px;
+    max-width:750px;
 }
 
-h1 em{
-  color:#ff9bc4;
-  font-weight:500;
+h1 span{
+    background:linear-gradient(120deg,#fff 20%,#d99ac8 60%,#9f8cf4);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
-.lead{
-  max-width:580px;
-  color:#b9b0b9;
-  font-size:16px;
-  line-height:1.8;
+.hero-text{
+    max-width:570px;
+    margin-top:28px;
+    color:#a9a3ad;
+    font-size:16px;
+    line-height:1.8;
 }
 
-.actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:30px;
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:34px;
 }
 
 .btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:9px;
-  padding:14px 21px;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:700;
-  transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:50px;
+    padding:0 22px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    transition:.3s;
 }
 
 .primary{
-  background:#f8f3f7;
-  color:#0b080c;
-  box-shadow:0 10px 35px rgba(255,111,174,.18);
+    color:#100c10;
+    background:linear-gradient(110deg,#f4d2ea,#c99bdf);
+    box-shadow:0 10px 40px rgba(207,130,190,.18);
 }
 
 .primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 15px 45px rgba(255,111,174,.32);
+    transform:translateY(-3px);
+    box-shadow:0 15px 50px rgba(207,130,190,.3);
 }
 
 .secondary{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(255,255,255,.035);
+    color:#ddd8df;
+}
+
+.secondary:hover{
+    background:rgba(255,255,255,.08);
+    transform:translateY(-3px);
 }
 
 .launch{
-  margin-top:35px;
-  color:#958c95;
-  font-size:12px;
+    margin-top:20px;
+    font-size:11px;
+    color:#77727b;
+    letter-spacing:1px;
 }
 
-.launch strong{
-  color:#eee6ec;
-  margin-left:5px;
+/* HERO IMAGE */
+
+.hero-visual{
+    display:flex;
+    justify-content:center;
+    position:relative;
 }
 
-/* IMAGE */
-
-.visual{
-  position:relative;
-  display:grid;
-  place-items:center;
+.image-wrap{
+    width:min(390px,85vw);
+    aspect-ratio:1/1;
+    border-radius:50%;
+    padding:9px;
+    background:linear-gradient(135deg,rgba(255,255,255,.4),rgba(203,130,190,.15),rgba(116,93,220,.2));
+    box-shadow:
+        0 0 100px rgba(211,126,188,.13),
+        inset 0 0 40px rgba(255,255,255,.04);
 }
 
-.orbit{
-  position:absolute;
-  width:410px;
-  height:410px;
-  border:1px solid rgba(255,111,174,.13);
-  border-radius:50%;
-  box-shadow:0 0 100px rgba(196,124,255,.08) inset;
+.image-wrap img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+    filter:saturate(.95);
 }
 
-.orbit:after{
-  content:"";
-  position:absolute;
-  inset:35px;
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:50%;
+.floating-badge{
+    position:absolute;
+    bottom:10%;
+    left:3%;
+    padding:13px 17px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:16px;
+    background:rgba(12,11,16,.78);
+    backdrop-filter:blur(18px);
+    font-size:11px;
+    color:#ddd8df;
 }
 
-.photo-wrap{
-  position:relative;
-  width:min(390px,78vw);
-  aspect-ratio:1;
-  border-radius:50%;
-  padding:9px;
-  background:
-    linear-gradient(135deg,
-    rgba(255,255,255,.5),
-    rgba(255,111,174,.16),
-    rgba(196,124,255,.35));
-  box-shadow:0 0 80px rgba(255,111,174,.14);
+.floating-badge strong{
+    display:block;
+    color:#fff;
+    font-size:13px;
+    margin-bottom:3px;
 }
 
-.photo{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  overflow:hidden;
-  background:#171118;
+/* ABOUT */
+
+.about{
+    padding:120px 0;
 }
 
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.section-label{
+    color:#b982aa;
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
 
-.badge{
-  position:absolute;
-  right:0;
-  bottom:12%;
-  padding:12px 15px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(13,10,15,.82);
-  backdrop-filter:blur(18px);
-  font-size:10px;
-  color:#bcb3bb;
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(38px,6vw,70px);
+    line-height:1;
+    letter-spacing:-2px;
+    max-width:700px;
 }
 
-.badge b{
-  display:block;
-  color:#fff;
-  font-size:12px;
-  margin-top:3px;
-}
-
-/* SECTIONS */
-
-section{
-  padding:100px 0;
-}
-
-.kicker{
-  color:#9e959e;
-  font-size:10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-
-h2{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-  font-size:clamp(38px,6vw,64px);
-  line-height:1;
-  margin:13px 0;
-}
-
-.sub{
-  color:var(--muted);
-  line-height:1.8;
-  font-size:14px;
-  max-width:650px;
-}
-
-.section-head{
-  margin-bottom:42px;
+.section-text{
+    color:#96909a;
+    line-height:1.8;
+    max-width:620px;
+    margin-top:22px;
 }
 
 /* CARDS */
 
+.experience{
+    padding:30px 0 120px;
+}
+
 .cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-top:55px;
 }
 
 .card{
-  min-height:210px;
-  padding:28px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.055),
-    rgba(255,255,255,.018)
-  );
-  transition:.3s;
+    min-height:240px;
+    padding:26px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:radial-gradient(circle,rgba(205,119,181,.12),transparent 70%);
+    right:-80px;
+    top:-80px;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(255,111,174,.3);
+    transform:translateY(-7px);
+    border-color:rgba(215,135,196,.28);
 }
 
-.icon{
-  font-size:23px;
-  margin-bottom:38px;
+.card-number{
+    color:#77717a;
+    font-size:11px;
+    letter-spacing:1px;
 }
 
 .card h3{
-  font-size:17px;
-  margin-bottom:9px;
+    margin-top:55px;
+    font-family:'Playfair Display',serif;
+    font-size:25px;
 }
 
 .card p{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
+    color:#85808a;
+    font-size:13px;
+    line-height:1.7;
+    margin-top:10px;
+}
+
+/* STATEMENT */
+
+.statement{
+    padding:80px 0 140px;
+}
+
+.statement-box{
+    border-top:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    padding:70px 0;
+    text-align:center;
+}
+
+.statement-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(40px,7vw,85px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.statement-box h2 span{
+    color:#a68be9;
 }
 
 /* COUNTDOWN */
 
-.launch-box{
-  border:1px solid var(--line);
-  border-radius:30px;
-  padding:48px;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:30px;
-  align-items:center;
-  background:
-    radial-gradient(
-      circle at 85% 50%,
-      rgba(255,111,174,.10),
-      transparent 35%
-    ),
-    rgba(255,255,255,.025);
+.countdown{
+    padding:100px 0;
 }
 
-.countdown{
-  display:flex;
-  gap:8px;
+.count-box{
+    padding:55px 30px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:30px;
+    background:
+        linear-gradient(135deg,rgba(205,126,183,.08),rgba(100,84,170,.06));
+}
+
+.count-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(35px,6vw,65px);
+}
+
+.count-box p{
+    margin-top:12px;
+    color:#817b84;
+    font-size:13px;
+}
+
+.timer{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    max-width:650px;
+    margin:40px auto 0;
+    gap:10px;
 }
 
 .time{
-  min-width:70px;
-  text-align:center;
-  padding:14px 8px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(255,255,255,.035);
-}
-
-.time b{
-  display:block;
-  font-size:23px;
+    padding:20px 10px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;
+    background:rgba(0,0,0,.2);
 }
 
 .time span{
-  font-size:8px;
-  letter-spacing:.12em;
-  color:#938b93;
+    display:block;
+    font-size:clamp(27px,5vw,42px);
+    font-weight:700;
+}
+
+.time small{
+    display:block;
+    margin-top:5px;
+    color:#77717a;
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
 }
 
 /* RULES */
 
 .rules{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+    padding:100px 0 120px;
+}
+
+.rule-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:45px;
 }
 
 .rule{
-  padding:20px;
-  border-left:1px solid rgba(255,111,174,.5);
-  background:rgba(255,255,255,.025);
-  color:#b9b0b9;
-  font-size:13px;
-  line-height:1.7;
+    padding:28px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.025);
 }
 
-.rule strong{
-  display:block;
-  color:#f5edf2;
-  margin-bottom:5px;
+.rule span{
+    display:inline-flex;
+    width:30px;
+    height:30px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(216,137,196,.1);
+    color:#d596c3;
+    font-size:11px;
+    margin-bottom:25px;
+}
+
+.rule h3{
+    font-size:15px;
+}
+
+.rule p{
+    color:#85808a;
+    font-size:13px;
+    line-height:1.7;
+    margin-top:9px;
+}
+
+/* CTA */
+
+.final{
+    padding:80px 0 110px;
+}
+
+.final-box{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    padding:90px 25px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:34px;
+    background:
+        radial-gradient(circle at 50% 0%,rgba(213,128,190,.12),transparent 45%),
+        rgba(255,255,255,.025);
+}
+
+.final-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(45px,8vw,90px);
+    line-height:.95;
+    letter-spacing:-3px;
+}
+
+.final-box p{
+    color:#89838d;
+    max-width:500px;
+    margin:20px auto 30px;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.final-box .btn{
+    min-width:190px;
 }
 
 /* FOOTER */
 
 footer{
-  border-top:1px solid var(--line);
-  padding:35px 0 55px;
-  color:#8f8790;
-  font-size:11px;
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
-.footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.channel{
-  color:#e8e0e7;
+.footer-brand{
+    font-size:14px;
+    font-weight:700;
 }
 
-/* ANIMATION */
+.footer-brand span{
+    color:#d78fc0;
+}
+
+.footer-copy{
+    color:#68636b;
+    font-size:10px;
+}
+
+.footer-link{
+    color:#aaa4ad;
+    font-size:11px;
+}
+
+/* REVEAL */
 
 .reveal{
-  opacity:0;
-  transform:translateY(18px);
-  transition:.8s ease;
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .8s ease,transform .8s ease;
 }
 
 .reveal.show{
-  opacity:1;
-  transform:none;
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:48px;
-  }
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
 
-  .visual{
-    order:-1;
-  }
+    .hero{
+        padding-top:125px;
+    }
 
-  .orbit{
-    width:330px;
-    height:330px;
-  }
+    .hero-visual{
+        order:-1;
+    }
 
-  .photo-wrap{
-    width:min(310px,76vw);
-  }
+    .image-wrap{
+        width:280px;
+    }
 
-  h1{
-    font-size:64px;
-  }
+    .floating-badge{
+        bottom:3%;
+        left:8%;
+    }
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .launch-box{
-    grid-template-columns:1fr;
-    padding:30px;
-  }
+    .rule-grid{
+        grid-template-columns:1fr;
+    }
 
-  .rules{
-    grid-template-columns:1fr;
-  }
-
-  .countdown{
-    width:100%;
-  }
-
-  .time{
-    flex:1;
-    min-width:0;
-  }
-
-  .footer{
-    flex-direction:column;
-    align-items:flex-start;
-  }
 }
 
-@media(max-width:420px){
-  h1{
-    font-size:55px;
-  }
+@media(max-width:600px){
 
-  .countdown{
-    gap:5px;
-  }
+    .container{
+        width:90%;
+    }
 
-  .time{
-    padding:12px 5px;
-  }
+    nav{
+        padding:15px 0;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .nav-btn{
+        padding:9px 13px;
+        font-size:10px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:120px 0 80px;
+    }
+
+    .hero-grid{
+        gap:45px;
+    }
+
+    h1{
+        font-size:56px;
+        letter-spacing:-3px;
+    }
+
+    .hero-text{
+        font-size:14px;
+        line-height:1.75;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .image-wrap{
+        width:245px;
+    }
+
+    .about{
+        padding:90px 0;
+    }
+
+    .section-title{
+        font-size:43px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+        margin-top:35px;
+    }
+
+    .card{
+        min-height:200px;
+    }
+
+    .card h3{
+        margin-top:40px;
+    }
+
+    .statement{
+        padding:50px 0 90px;
+    }
+
+    .statement-box{
+        padding:55px 10px;
+    }
+
+    .statement-box h2{
+        font-size:48px;
+    }
+
+    .countdown{
+        padding:70px 0;
+    }
+
+    .count-box{
+        padding:45px 15px;
+        border-radius:25px;
+    }
+
+    .timer{
+        gap:6px;
+        margin-top:30px;
+    }
+
+    .time{
+        padding:15px 5px;
+        border-radius:13px;
+    }
+
+    .time span{
+        font-size:25px;
+    }
+
+    .time small{
+        font-size:7px;
+    }
+
+    .rules{
+        padding:75px 0 90px;
+    }
+
+    .final{
+        padding:40px 0 80px;
+    }
+
+    .final-box{
+        padding:70px 20px;
+        border-radius:27px;
+    }
+
+    .final-box h2{
+        font-size:53px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <!-- NAV -->
-<nav>
-  <a class="brand" href="#">
-    <span class="logo">
-      <img src="profile.jpg" alt="HeartSync India">
-    </span>
-    <span>HeartSync India</span>
-  </a>
 
-  <a class="nav-btn"
-     href="https://t.me/heartsync_india"
-     target="_blank">
-     Telegram ↗
-  </a>
+<nav>
+<div class="nav-inner">
+
+<a href="#" class="logo">
+Heart<span>Sync</span> India
+</a>
+
+<a
+href="https://t.me/heartsync_india"
+target="_blank"
+rel="noopener"
+class="nav-btn">
+
+OUR PREMIUM ↗
+
+</a>
+
+</div>
 </nav>
 
 
 <!-- HERO -->
-<main>
 
 <section class="hero">
 
+<div class="container">
+
 <div class="hero-grid">
 
-<div class="reveal">
+<div class="hero-content reveal">
 
-<span class="eyebrow">
+<div class="eyebrow">
 <span class="dot"></span>
-India · Social Connection Community
-</span>
+India's premium social community
+</div>
 
 <h1>
-Find your <em>people.</em>
+Find your <span>people.</span>
 </h1>
 
-<p class="lead">
-A fresh space to meet new people, start conversations
-and discover genuine connections — without the noise.
+<p class="hero-text">
+A private-feeling digital space for people who want
+better conversations, genuine connections and a
+community that actually feels human.
 </p>
 
-<div class="actions">
+<div class="buttons">
 
-<a class="btn primary"
+<a
 href="https://t.me/heartsync_india"
-target="_blank">
-♡ Join HeartSync
+target="_blank"
+rel="noopener"
+class="btn primary">
+
+OUR PREMIUM ↗
+
 </a>
 
-<a class="btn secondary"
-href="#about">
-Explore ↓
+<a href="#about" class="btn secondary">
+EXPLORE
 </a>
 
 </div>
 
 <div class="launch">
-Official launch
-<strong>24 November 2026 · 7:00 PM IST</strong>
+GOING LIVE · 24 NOVEMBER 2026 · 7:00 PM IST
 </div>
 
 </div>
 
 
-<div class="visual reveal">
+<div class="hero-visual reveal">
 
-<div class="orbit"></div>
-
-<div class="photo-wrap">
-<div class="photo">
+<div class="image-wrap">
 <img src="profile.jpg" alt="HeartSync India">
 </div>
-</div>
 
-<div class="badge">
-HEARTSYNC INDIA
-<b>Launching 24 Nov · 7 PM</b>
-</div>
-
+<div class="floating-badge">
+<strong>HeartSync India</strong>
+Made for meaningful connections
 </div>
 
 </div>
+
+</div>
+
+</div>
+
 </section>
 
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="about" id="about">
 
-<div class="section-head reveal">
+<div class="container">
 
-<div class="kicker">
-01 / The idea
+<div class="reveal">
+
+<div class="section-label">
+THE IDEA
 </div>
 
-<h2>
+<h2 class="section-title">
 More than a group.
+A place to belong.
 </h2>
 
-<p class="sub">
-HeartSync is built around simple conversations,
-new connections and a community where people
-can actually feel comfortable being themselves.
+<p class="section-text">
+HeartSync India is built for people who are tired of
+random noise and want a better way to discover people,
+conversations and communities that feel worth staying for.
 </p>
 
 </div>
 
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="container">
+
+<div class="section-label reveal">
+THE EXPERIENCE
+</div>
 
 <div class="cards">
 
 <div class="card reveal">
-<div class="icon">♡</div>
+
+<div class="card-number">
+01
+</div>
 
 <h3>
 Meet
 </h3>
 
 <p>
-Discover new people and different personalities
-from across India.
+Discover people with different personalities,
+stories and interests.
 </p>
 
 </div>
 
 
 <div class="card reveal">
-<div class="icon">◌</div>
 
-<h3>
-Talk
-</h3>
-
-<p>
-Start conversations naturally.
-No complicated profiles or endless setup.
-</p>
-
+<div class="card-number">
+02
 </div>
-
-
-<div class="card reveal">
-<div class="icon">✦</div>
 
 <h3>
 Connect
 </h3>
 
 <p>
-Let conversations become friendships,
-connections or something more.
+Start conversations without the pressure
+of making everything complicated.
 </p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+Discover
+</h3>
+
+<p>
+Find communities, conversations and
+experiences that match your vibe.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-number">
+04
+</div>
+
+<h3>
+Stay
+</h3>
+
+<p>
+Build real connections and become part
+of something bigger than a random group.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATEMENT -->
+
+<section class="statement">
+
+<div class="container">
+
+<div class="statement-box reveal">
+
+<h2>
+Less noise.<br>
+More <span>connection.</span>
+</h2>
 
 </div>
 
@@ -688,47 +982,47 @@ connections or something more.
 
 <!-- COUNTDOWN -->
 
-<section>
+<section class="countdown">
 
-<div class="launch-box reveal">
+<div class="container">
 
-<div>
+<div class="count-box reveal">
 
-<div class="kicker">
-02 / Mark your calendar
+<div class="section-label">
+THE COUNTDOWN
 </div>
 
 <h2>
 We go live at 7.
 </h2>
 
-<p class="sub">
-24 November 2026 · 7:00 PM IST
+<p>
+24 November 2026 · 7:00 PM · IST
 </p>
 
-</div>
 
-
-<div class="countdown" id="countdown">
+<div class="timer">
 
 <div class="time">
-<b id="days">00</b>
-<span>DAYS</span>
-</div>
-
-<div class="time">
-<b id="hours">00</b>
-<span>HOURS</span>
+<span id="days">00</span>
+<small>Days</small>
 </div>
 
 <div class="time">
-<b id="minutes">00</b>
-<span>MIN</span>
+<span id="hours">00</span>
+<small>Hours</small>
 </div>
 
 <div class="time">
-<b id="seconds">00</b>
-<span>SEC</span>
+<span id="minutes">00</span>
+<small>Minutes</small>
+</div>
+
+<div class="time">
+<span id="seconds">00</span>
+<small>Seconds</small>
+</div>
+
 </div>
 
 </div>
@@ -738,47 +1032,75 @@ We go live at 7.
 </section>
 
 
-<!-- COMMUNITY -->
+<!-- COMMUNITY CODE -->
 
-<section>
+<section class="rules">
 
-<div class="section-head reveal">
+<div class="container">
 
-<div class="kicker">
-03 / Community code
+<div class="reveal">
+
+<div class="section-label">
+COMMUNITY CODE
 </div>
 
-<h2>
-Keep it genuine.
+<h2 class="section-title">
+Keep it real.
+Keep it respectful.
 </h2>
 
 </div>
 
 
-<div class="rules">
+<div class="rule-grid">
 
 <div class="rule reveal">
-<strong>Respect everyone</strong>
-Different people, different boundaries.
-Keep conversations respectful.
+
+<span>01</span>
+
+<h3>
+Respect everyone
+</h3>
+
+<p>
+Different personalities and opinions are welcome.
+Respect is non-negotiable.
+</p>
+
 </div>
 
-<div class="rule reveal">
-<strong>No spam</strong>
-No unsolicited promotions, flooding
-or disruptive behaviour.
-</div>
 
 <div class="rule reveal">
-<strong>Protect privacy</strong>
-Never pressure anyone to share
-personal information.
+
+<span>02</span>
+
+<h3>
+No unnecessary drama
+</h3>
+
+<p>
+We're here for conversations, connections
+and good energy — not chaos.
+</p>
+
 </div>
 
+
 <div class="rule reveal">
-<strong>Good vibes only</strong>
-Make the group a place people
-actually want to return to.
+
+<span>03</span>
+
+<h3>
+Be yourself
+</h3>
+
+<p>
+You don't need to pretend to fit in.
+Your personality is the point.
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -786,141 +1108,159 @@ actually want to return to.
 </section>
 
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 
-<section>
+<section class="final">
 
-<div class="launch-box reveal">
+<div class="container">
 
-<div>
+<div class="final-box reveal">
 
-<div class="kicker">
-04 / Ready?
+<div class="section-label">
+HEARTSYNC INDIA
 </div>
 
 <h2>
-See you inside.
+See you<br>
+inside.
 </h2>
 
-<p class="sub">
-The community opens on 24 November
-at 7:00 PM IST.
+<p>
+The doors open on 24 November.
+Join the community and be there from day one.
 </p>
 
-</div>
-
-<a class="btn primary"
+<a
 href="https://t.me/heartsync_india"
-target="_blank">
-Join Now ↗
+target="_blank"
+rel="noopener"
+class="btn primary">
+
+OUR PREMIUM ↗
+
 </a>
 
 </div>
 
-</section>
+</div>
 
-</main>
+</section>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-<div class="footer">
+<div class="container">
 
-<div>
-© 2026 HeartSync India · Connect. Talk. Vibe.
+<div class="footer-inner">
+
+<div class="footer-brand">
+Heart<span>Sync</span> India
 </div>
 
-<a class="channel"
+<div class="footer-copy">
+© 2026 HeartSync India
+</div>
+
+<a
 href="https://t.me/heartsync_india_co"
-target="_blank">
-Official Telegram Channel ↗
+target="_blank"
+rel="noopener"
+class="footer-link">
+
+Telegram Community ↗
+
 </a>
 
 </div>
 
-</footer>
-
 </div>
+
+</footer>
 
 
 <script>
 
 /* COUNTDOWN */
 
-const launch =
+const launchDate =
 new Date("2026-11-24T19:00:00+05:30").getTime();
 
 function updateCountdown(){
 
-const now = Date.now();
+    const now = new Date().getTime();
 
-const difference =
-Math.max(0, launch - now);
+    const distance = launchDate - now;
 
-const days =
-Math.floor(difference / 86400000);
+    if(distance <= 0){
 
-const hours =
-Math.floor(
-(difference % 86400000) / 3600000
-);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
 
-const minutes =
-Math.floor(
-(difference % 3600000) / 60000
-);
+        return;
+    }
 
-const seconds =
-Math.floor(
-(difference % 60000) / 1000
-);
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
 
-document.getElementById("days").textContent =
-String(days).padStart(2,"0");
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
 
-document.getElementById("hours").textContent =
-String(hours).padStart(2,"0");
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
 
-document.getElementById("minutes").textContent =
-String(minutes).padStart(2,"0");
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
 
-document.getElementById("seconds").textContent =
-String(seconds).padStart(2,"0");
+    document.getElementById("days").innerText =
+        String(days).padStart(2,"0");
 
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2,"0");
 }
 
 updateCountdown();
+
 setInterval(updateCountdown,1000);
 
 
-/* SCROLL ANIMATION */
+/* SCROLL REVEAL */
 
 const observer =
 new IntersectionObserver(
-
 (entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-
-});
-
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
 },
-
-{threshold:.08}
-
+{
+    threshold:.12
+}
 );
 
 document
 .querySelectorAll(".reveal")
-.forEach(element=>observer.observe(element));
+.forEach(el=>observer.observe(el));
 
 </script>
 
 </body>
-</html>
+  </html>
