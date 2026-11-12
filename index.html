@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HeartSync India — Connect. Talk. Vibe.</title>
+<meta name="description" content="HeartSync India — a new space to connect, talk and meet new people. Launching 24 November 2026 at 7 PM.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root{
+  --bg:#09070b;
+  --text:#f8f3f7;
+  --muted:#aaa0aa;
+  --line:rgba(255,255,255,.11);
+  --pink:#ff6fae;
+  --purple:#c47cff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 75% 15%,rgba(255,105,170,.13),transparent 28%),
+    radial-gradient(circle at 15% 55%,rgba(160,90,255,.10),transparent 30%),
+    #09070b;
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
+  background-image:
+    radial-gradient(rgba(255,255,255,.7) .6px,transparent .7px);
+  background-size:34px 34px;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,calc(100% - 36px));
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  position:relative;
+  z-index:5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:700;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.25);
+  background:#151016;
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.nav-btn{
+  border:1px solid var(--line);
+  padding:9px 15px;
+  border-radius:999px;
+  font-size:12px;
+  color:#ddd5dc;
+  background:rgba(255,255,255,.035);
+}
+
+/* HERO */
+
+.hero{
+  min-height:calc(100vh - 88px);
+  display:grid;
+  place-items:center;
+  padding:35px 0 90px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:65px;
+  align-items:center;
+  width:100%;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 14px;
+  background:rgba(255,255,255,.035);
+  color:#d6ced5;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--pink);
+  box-shadow:0 0 15px var(--pink);
+}
+
+h1{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  font-size:clamp(58px,8vw,104px);
+  line-height:.87;
+  letter-spacing:-.065em;
+  margin:28px 0 24px;
+}
+
+h1 em{
+  color:#ff9bc4;
+  font-weight:500;
+}
+
+.lead{
+  max-width:580px;
+  color:#b9b0b9;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  padding:14px 21px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.primary{
+  background:#f8f3f7;
+  color:#0b080c;
+  box-shadow:0 10px 35px rgba(255,111,174,.18);
+}
+
+.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 45px rgba(255,111,174,.32);
+}
+
+.secondary{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+}
+
+.launch{
+  margin-top:35px;
+  color:#958c95;
+  font-size:12px;
+}
+
+.launch strong{
+  color:#eee6ec;
+  margin-left:5px;
+}
+
+/* IMAGE */
+
+.visual{
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+
+.orbit{
+  position:absolute;
+  width:410px;
+  height:410px;
+  border:1px solid rgba(255,111,174,.13);
+  border-radius:50%;
+  box-shadow:0 0 100px rgba(196,124,255,.08) inset;
+}
+
+.orbit:after{
+  content:"";
+  position:absolute;
+  inset:35px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:50%;
+}
+
+.photo-wrap{
+  position:relative;
+  width:min(390px,78vw);
+  aspect-ratio:1;
+  border-radius:50%;
+  padding:9px;
+  background:
+    linear-gradient(135deg,
+    rgba(255,255,255,.5),
+    rgba(255,111,174,.16),
+    rgba(196,124,255,.35));
+  box-shadow:0 0 80px rgba(255,111,174,.14);
+}
+
+.photo{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  overflow:hidden;
+  background:#171118;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.badge{
+  position:absolute;
+  right:0;
+  bottom:12%;
+  padding:12px 15px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(13,10,15,.82);
+  backdrop-filter:blur(18px);
+  font-size:10px;
+  color:#bcb3bb;
+}
+
+.badge b{
+  display:block;
+  color:#fff;
+  font-size:12px;
+  margin-top:3px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:100px 0;
+}
+
+.kicker{
+  color:#9e959e;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  font-size:clamp(38px,6vw,64px);
+  line-height:1;
+  margin:13px 0;
+}
+
+.sub{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:14px;
+  max-width:650px;
+}
+
+.section-head{
+  margin-bottom:42px;
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.card{
+  min-height:210px;
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.055),
+    rgba(255,255,255,.018)
+  );
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,111,174,.3);
+}
+
+.icon{
+  font-size:23px;
+  margin-bottom:38px;
+}
+
+.card h3{
+  font-size:17px;
+  margin-bottom:9px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* COUNTDOWN */
+
+.launch-box{
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:48px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(255,111,174,.10),
+      transparent 35%
+    ),
+    rgba(255,255,255,.025);
+}
+
+.countdown{
+  display:flex;
+  gap:8px;
+}
+
+.time{
+  min-width:70px;
+  text-align:center;
+  padding:14px 8px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+}
+
+.time b{
+  display:block;
+  font-size:23px;
+}
+
+.time span{
+  font-size:8px;
+  letter-spacing:.12em;
+  color:#938b93;
+}
+
+/* RULES */
+
+.rules{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.rule{
+  padding:20px;
+  border-left:1px solid rgba(255,111,174,.5);
+  background:rgba(255,255,255,.025);
+  color:#b9b0b9;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.rule strong{
+  display:block;
+  color:#f5edf2;
+  margin-bottom:5px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:35px 0 55px;
+  color:#8f8790;
+  font-size:11px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.channel{
+  color:#e8e0e7;
+}
+
+/* ANIMATION */
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:.8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:48px;
+  }
+
+  .visual{
+    order:-1;
+  }
+
+  .orbit{
+    width:330px;
+    height:330px;
+  }
+
+  .photo-wrap{
+    width:min(310px,76vw);
+  }
+
+  h1{
+    font-size:64px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .launch-box{
+    grid-template-columns:1fr;
+    padding:30px;
+  }
+
+  .rules{
+    grid-template-columns:1fr;
+  }
+
+  .countdown{
+    width:100%;
+  }
+
+  .time{
+    flex:1;
+    min-width:0;
+  }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:420px){
+  h1{
+    font-size:55px;
+  }
+
+  .countdown{
+    gap:5px;
+  }
+
+  .time{
+    padding:12px 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <a class="brand" href="#">
+    <span class="logo">
+      <img src="profile.jpg" alt="HeartSync India">
+    </span>
+    <span>HeartSync India</span>
+  </a>
+
+  <a class="nav-btn"
+     href="https://t.me/heartsync_india"
+     target="_blank">
+     Telegram ↗
+  </a>
+</nav>
+
+
+<!-- HERO -->
+<main>
+
+<section class="hero">
+
+<div class="hero-grid">
+
+<div class="reveal">
+
+<span class="eyebrow">
+<span class="dot"></span>
+India · Social Connection Community
+</span>
+
+<h1>
+Find your <em>people.</em>
+</h1>
+
+<p class="lead">
+A fresh space to meet new people, start conversations
+and discover genuine connections — without the noise.
+</p>
+
+<div class="actions">
+
+<a class="btn primary"
+href="https://t.me/heartsync_india"
+target="_blank">
+♡ Join HeartSync
+</a>
+
+<a class="btn secondary"
+href="#about">
+Explore ↓
+</a>
+
+</div>
+
+<div class="launch">
+Official launch
+<strong>24 November 2026 · 7:00 PM IST</strong>
+</div>
+
+</div>
+
+
+<div class="visual reveal">
+
+<div class="orbit"></div>
+
+<div class="photo-wrap">
+<div class="photo">
+<img src="profile.jpg" alt="HeartSync India">
+</div>
+</div>
+
+<div class="badge">
+HEARTSYNC INDIA
+<b>Launching 24 Nov · 7 PM</b>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-head reveal">
+
+<div class="kicker">
+01 / The idea
+</div>
+
+<h2>
+More than a group.
+</h2>
+
+<p class="sub">
+HeartSync is built around simple conversations,
+new connections and a community where people
+can actually feel comfortable being themselves.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card reveal">
+<div class="icon">♡</div>
+
+<h3>
+Meet
+</h3>
+
+<p>
+Discover new people and different personalities
+from across India.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+<div class="icon">◌</div>
+
+<h3>
+Talk
+</h3>
+
+<p>
+Start conversations naturally.
+No complicated profiles or endless setup.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+<div class="icon">✦</div>
+
+<h3>
+Connect
+</h3>
+
+<p>
+Let conversations become friendships,
+connections or something more.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section>
+
+<div class="launch-box reveal">
+
+<div>
+
+<div class="kicker">
+02 / Mark your calendar
+</div>
+
+<h2>
+We go live at 7.
+</h2>
+
+<p class="sub">
+24 November 2026 · 7:00 PM IST
+</p>
+
+</div>
+
+
+<div class="countdown" id="countdown">
+
+<div class="time">
+<b id="days">00</b>
+<span>DAYS</span>
+</div>
+
+<div class="time">
+<b id="hours">00</b>
+<span>HOURS</span>
+</div>
+
+<div class="time">
+<b id="minutes">00</b>
+<span>MIN</span>
+</div>
+
+<div class="time">
+<b id="seconds">00</b>
+<span>SEC</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section>
+
+<div class="section-head reveal">
+
+<div class="kicker">
+03 / Community code
+</div>
+
+<h2>
+Keep it genuine.
+</h2>
+
+</div>
+
+
+<div class="rules">
+
+<div class="rule reveal">
+<strong>Respect everyone</strong>
+Different people, different boundaries.
+Keep conversations respectful.
+</div>
+
+<div class="rule reveal">
+<strong>No spam</strong>
+No unsolicited promotions, flooding
+or disruptive behaviour.
+</div>
+
+<div class="rule reveal">
+<strong>Protect privacy</strong>
+Never pressure anyone to share
+personal information.
+</div>
+
+<div class="rule reveal">
+<strong>Good vibes only</strong>
+Make the group a place people
+actually want to return to.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="launch-box reveal">
+
+<div>
+
+<div class="kicker">
+04 / Ready?
+</div>
+
+<h2>
+See you inside.
+</h2>
+
+<p class="sub">
+The community opens on 24 November
+at 7:00 PM IST.
+</p>
+
+</div>
+
+<a class="btn primary"
+href="https://t.me/heartsync_india"
+target="_blank">
+Join Now ↗
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer">
+
+<div>
+© 2026 HeartSync India · Connect. Talk. Vibe.
+</div>
+
+<a class="channel"
+href="https://t.me/heartsync_india_co"
+target="_blank">
+Official Telegram Channel ↗
+</a>
+
+</div>
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* COUNTDOWN */
+
+const launch =
+new Date("2026-11-24T19:00:00+05:30").getTime();
+
+function updateCountdown(){
+
+const now = Date.now();
+
+const difference =
+Math.max(0, launch - now);
+
+const days =
+Math.floor(difference / 86400000);
+
+const hours =
+Math.floor(
+(difference % 86400000) / 3600000
+);
+
+const minutes =
+Math.floor(
+(difference % 3600000) / 60000
+);
+
+const seconds =
+Math.floor(
+(difference % 60000) / 1000
+);
+
+document.getElementById("days").textContent =
+String(days).padStart(2,"0");
+
+document.getElementById("hours").textContent =
+String(hours).padStart(2,"0");
+
+document.getElementById("minutes").textContent =
+String(minutes).padStart(2,"0");
+
+document.getElementById("seconds").textContent =
+String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+
+/* SCROLL ANIMATION */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},
+
+{threshold:.08}
+
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>observer.observe(element));
+
+</script>
+
+</body>
+</html>
