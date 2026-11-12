@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HeartSync India — Find Your People</title>
+<title>HeartSync India — Meet Your People</title>
 
-<meta name="description" content="HeartSync India — A premium community to meet new people, make meaningful connections and discover your people.">
+<meta name="description"
+content="HeartSync India — Meet new people, start conversations and find your vibe.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,720 +27,1203 @@ html{
 }
 
 body{
-    background:#07070b;
-    color:#f7f5f8;
-    font-family:'DM Sans',sans-serif;
+    background:#050507;
+    color:#fff;
+    font-family:"DM Sans",sans-serif;
     overflow-x:hidden;
 }
+
+/* BACKGROUND */
 
 body::before{
     content:"";
     position:fixed;
     width:500px;
     height:500px;
-    background:radial-gradient(circle,rgba(219,86,173,.13),transparent 65%);
-    top:-180px;
-    right:-180px;
+    top:-280px;
+    right:-250px;
+    background:radial-gradient(
+        circle,
+        rgba(215,130,205,.20),
+        transparent 68%
+    );
     pointer-events:none;
+    z-index:-1;
 }
 
 body::after{
     content:"";
     position:fixed;
-    width:450px;
-    height:450px;
-    background:radial-gradient(circle,rgba(123,92,255,.10),transparent 65%);
-    bottom:-200px;
-    left:-180px;
+    width:500px;
+    height:500px;
+    bottom:-300px;
+    left:-300px;
+    background:radial-gradient(
+        circle,
+        rgba(120,100,230,.13),
+        transparent 68%
+    );
     pointer-events:none;
+    z-index:-1;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
-}
-
-.container{
-    width:min(1120px,92%);
-    margin:auto;
-}
-
-section{
-    position:relative;
+    color:inherit;
 }
 
 /* NAV */
 
-nav{
+.navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:50;
-    padding:18px 0;
-    background:rgba(7,7,11,.68);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border-bottom:1px solid rgba(255,255,255,.06);
+    z-index:100;
+    padding:14px 12px;
 }
 
-.nav-inner{
-    width:min(1120px,92%);
+.nav{
+    max-width:1180px;
+    width:100%;
+    min-height:58px;
     margin:auto;
+
+    padding:7px 8px 7px 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:100px;
+
+    background:rgba(7,7,10,.72);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.25);
 }
 
 .logo{
-    font-size:18px;
-    font-weight:700;
-    letter-spacing:-.4px;
+    font-family:"Manrope",sans-serif;
+    font-weight:800;
+    font-size:16px;
+    letter-spacing:-.8px;
 }
 
 .logo span{
-    color:#d987c4;
+    background:linear-gradient(
+        90deg,
+        #f2d8ec,
+        #b98ce1
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.status{
+    color:#625d66;
+    font-size:7px;
+    font-weight:800;
+    letter-spacing:1.7px;
 }
 
 .nav-btn{
-    padding:10px 16px;
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:999px;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.7px;
-    background:rgba(255,255,255,.04);
-    transition:.3s;
-}
+    min-height:40px;
+    padding:0 18px;
 
-.nav-btn:hover{
-    background:rgba(255,255,255,.09);
-    border-color:rgba(217,135,196,.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:100px;
+
+    background:linear-gradient(
+        135deg,
+        #f5dcef,
+        #c48fdf
+    );
+
+    color:#160d16;
+
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:1.2px;
+
+    box-shadow:
+        0 10px 35px rgba(205,130,190,.25);
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    min-height:100svh;
+
+    padding:
+        135px 0
+        80px;
+
     display:flex;
     align-items:center;
-    padding:130px 0 70px;
-    position:relative;
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    align-items:center;
-    gap:60px;
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
 }
 
-.eyebrow{
+.hero-content{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+.badge{
     display:inline-flex;
     align-items:center;
-    gap:8px;
-    padding:8px 13px;
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:999px;
+    gap:9px;
+
+    padding:10px 15px;
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:100px;
+
     background:rgba(255,255,255,.035);
-    color:#cfc9d0;
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-    margin-bottom:25px;
+
+    color:#aaa3ad;
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.8px;
 }
 
 .dot{
     width:6px;
     height:6px;
-    background:#e49acf;
+
     border-radius:50%;
-    box-shadow:0 0 15px #e49acf;
+
+    background:#e39bd1;
+
+    box-shadow:
+        0 0 16px #e39bd1;
 }
 
-h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(55px,8vw,105px);
-    line-height:.92;
-    letter-spacing:-4px;
-    max-width:750px;
+.hero h1{
+    margin-top:30px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        62px,
+        11vw,
+        112px
+    );
+
+    line-height:.84;
+
+    letter-spacing:-7px;
+
+    font-weight:800;
 }
 
-h1 span{
-    background:linear-gradient(120deg,#fff 20%,#d99ac8 60%,#9f8cf4);
+.gradient{
+    display:block;
+
+    background:linear-gradient(
+        105deg,
+        #ffffff 10%,
+        #efcbe7 48%,
+        #a68ce5 100%
+    );
+
     -webkit-background-clip:text;
+    background-clip:text;
+
     color:transparent;
 }
 
-.hero-text{
-    max-width:570px;
-    margin-top:28px;
-    color:#a9a3ad;
-    font-size:16px;
-    line-height:1.8;
-}
+.description{
+    max-width:580px;
+    margin:30px auto 0;
 
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:34px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:50px;
-    padding:0 22px;
-    border-radius:999px;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1px;
-    transition:.3s;
-}
-
-.primary{
-    color:#100c10;
-    background:linear-gradient(110deg,#f4d2ea,#c99bdf);
-    box-shadow:0 10px 40px rgba(207,130,190,.18);
-}
-
-.primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 50px rgba(207,130,190,.3);
-}
-
-.secondary{
-    border:1px solid rgba(255,255,255,.13);
-    background:rgba(255,255,255,.035);
-    color:#ddd8df;
-}
-
-.secondary:hover{
-    background:rgba(255,255,255,.08);
-    transform:translateY(-3px);
-}
-
-.launch{
-    margin-top:20px;
-    font-size:11px;
-    color:#77727b;
-    letter-spacing:1px;
-}
-
-/* HERO IMAGE */
-
-.hero-visual{
-    display:flex;
-    justify-content:center;
-    position:relative;
-}
-
-.image-wrap{
-    width:min(390px,85vw);
-    aspect-ratio:1/1;
-    border-radius:50%;
-    padding:9px;
-    background:linear-gradient(135deg,rgba(255,255,255,.4),rgba(203,130,190,.15),rgba(116,93,220,.2));
-    box-shadow:
-        0 0 100px rgba(211,126,188,.13),
-        inset 0 0 40px rgba(255,255,255,.04);
-}
-
-.image-wrap img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    border-radius:50%;
-    filter:saturate(.95);
-}
-
-.floating-badge{
-    position:absolute;
-    bottom:10%;
-    left:3%;
-    padding:13px 17px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:16px;
-    background:rgba(12,11,16,.78);
-    backdrop-filter:blur(18px);
-    font-size:11px;
-    color:#ddd8df;
-}
-
-.floating-badge strong{
-    display:block;
-    color:#fff;
-    font-size:13px;
-    margin-bottom:3px;
-}
-
-/* ABOUT */
-
-.about{
-    padding:120px 0;
-}
-
-.section-label{
-    color:#b982aa;
-    font-size:11px;
-    letter-spacing:2px;
-    font-weight:700;
-    text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.section-title{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(38px,6vw,70px);
-    line-height:1;
-    letter-spacing:-2px;
-    max-width:700px;
-}
-
-.section-text{
-    color:#96909a;
-    line-height:1.8;
-    max-width:620px;
-    margin-top:22px;
-}
-
-/* CARDS */
-
-.experience{
-    padding:30px 0 120px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
-    margin-top:55px;
-}
-
-.card{
-    min-height:240px;
-    padding:26px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:24px;
-    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
-    transition:.4s;
-    position:relative;
-    overflow:hidden;
-}
-
-.card::after{
-    content:"";
-    position:absolute;
-    width:150px;
-    height:150px;
-    background:radial-gradient(circle,rgba(205,119,181,.12),transparent 70%);
-    right:-80px;
-    top:-80px;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(215,135,196,.28);
-}
-
-.card-number{
-    color:#77717a;
-    font-size:11px;
-    letter-spacing:1px;
-}
-
-.card h3{
-    margin-top:55px;
-    font-family:'Playfair Display',serif;
-    font-size:25px;
-}
-
-.card p{
     color:#85808a;
-    font-size:13px;
-    line-height:1.7;
-    margin-top:10px;
-}
 
-/* STATEMENT */
+    font-size:14px;
 
-.statement{
-    padding:80px 0 140px;
-}
-
-.statement-box{
-    border-top:1px solid rgba(255,255,255,.1);
-    border-bottom:1px solid rgba(255,255,255,.1);
-    padding:70px 0;
-    text-align:center;
-}
-
-.statement-box h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(40px,7vw,85px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.statement-box h2 span{
-    color:#a68be9;
-}
-
-/* COUNTDOWN */
-
-.countdown{
-    padding:100px 0;
-}
-
-.count-box{
-    padding:55px 30px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:30px;
-    background:
-        linear-gradient(135deg,rgba(205,126,183,.08),rgba(100,84,170,.06));
-}
-
-.count-box h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(35px,6vw,65px);
-}
-
-.count-box p{
-    margin-top:12px;
-    color:#817b84;
-    font-size:13px;
-}
-
-.timer{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    max-width:650px;
-    margin:40px auto 0;
-    gap:10px;
-}
-
-.time{
-    padding:20px 10px;
-    border:1px solid rgba(255,255,255,.07);
-    border-radius:18px;
-    background:rgba(0,0,0,.2);
-}
-
-.time span{
-    display:block;
-    font-size:clamp(27px,5vw,42px);
-    font-weight:700;
-}
-
-.time small{
-    display:block;
-    margin-top:5px;
-    color:#77717a;
-    font-size:9px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-/* RULES */
-
-.rules{
-    padding:100px 0 120px;
-}
-
-.rule-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    margin-top:45px;
-}
-
-.rule{
-    padding:28px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:22px;
-    background:rgba(255,255,255,.025);
-}
-
-.rule span{
-    display:inline-flex;
-    width:30px;
-    height:30px;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:rgba(216,137,196,.1);
-    color:#d596c3;
-    font-size:11px;
-    margin-bottom:25px;
-}
-
-.rule h3{
-    font-size:15px;
-}
-
-.rule p{
-    color:#85808a;
-    font-size:13px;
-    line-height:1.7;
-    margin-top:9px;
+    line-height:1.9;
 }
 
 /* CTA */
 
+.actions{
+    margin-top:35px;
+
+    display:flex;
+    justify-content:center;
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    min-height:62px;
+    min-width:235px;
+
+    padding:0 28px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+
+    border-radius:100px;
+
+    background:linear-gradient(
+        110deg,
+        #f8e1f0,
+        #c390df
+    );
+
+    color:#160d16;
+
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.4px;
+
+    box-shadow:
+        0 20px 65px rgba(211,125,192,.25);
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 25px 80px rgba(211,125,192,.42);
+}
+
+.arrow{
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(30,10,30,.12);
+}
+
+.secondary-btn{
+    min-height:62px;
+    min-width:150px;
+
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.035);
+
+    color:#aaa4ad;
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.3px;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:rgba(255,255,255,.07);
+    border-color:rgba(230,170,215,.25);
+}
+
+/* LAUNCH */
+
+.launch{
+    margin-top:19px;
+
+    color:#5e5962;
+
+    font-size:8px;
+    font-weight:800;
+
+    letter-spacing:1.6px;
+}
+
+/* HERO ORB */
+
+.orb-area{
+    position:relative;
+
+    width:260px;
+    height:260px;
+
+    margin:65px auto 0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.orb{
+    width:155px;
+    height:155px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,.95),
+            rgba(229,170,220,.55) 20%,
+            rgba(159,116,207,.18) 55%,
+            transparent 72%
+        );
+
+    filter:blur(.2px);
+
+    box-shadow:
+        0 0 100px rgba(218,137,201,.25),
+        0 0 180px rgba(130,110,220,.12);
+
+    animation:float 5s ease-in-out infinite;
+}
+
+.ring{
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    border:1px solid rgba(231,190,225,.10);
+
+    border-radius:50%;
+
+    animation:rotate 18s linear infinite;
+}
+
+.ring::before{
+    content:"";
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    top:24px;
+    right:30px;
+
+    border-radius:50%;
+
+    background:#d89ac8;
+
+    box-shadow:
+        0 0 18px #d89ac8;
+}
+
+.ring2{
+    width:190px;
+    height:190px;
+
+    border-color:rgba(160,140,230,.10);
+
+    animation-direction:reverse;
+    animation-duration:14s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* COUNTDOWN */
+
+.countdown-section{
+    padding:20px 0 100px;
+}
+
+.countdown-box{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:42px 25px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    border-radius:34px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(215,125,190,.14),
+            transparent 58%
+        ),
+        rgba(255,255,255,.025);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.25);
+}
+
+.small-label{
+    color:#d094bd;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:2.2px;
+}
+
+.countdown-box h2{
+    margin-top:13px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        35px,
+        7vw,
+        58px
+    );
+
+    letter-spacing:-3px;
+}
+
+.date{
+    margin-top:10px;
+
+    color:#77717b;
+
+    font-size:10px;
+    letter-spacing:.5px;
+}
+
+.timer{
+    max-width:650px;
+
+    margin:32px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:8px;
+}
+
+.time{
+    padding:20px 8px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:18px;
+
+    background:rgba(0,0,0,.20);
+}
+
+.time b{
+    display:block;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        26px,
+        6vw,
+        43px
+    );
+
+    letter-spacing:-2px;
+}
+
+.time small{
+    display:block;
+
+    margin-top:5px;
+
+    color:#57525a;
+
+    font-size:6px;
+
+    font-weight:900;
+
+    letter-spacing:1.6px;
+}
+
+/* AFTER LAUNCH */
+
+.live-message{
+    display:none;
+
+    margin-top:25px;
+
+    padding:12px 18px;
+
+    border:1px solid rgba(120,215,160,.15);
+
+    border-radius:100px;
+
+    background:rgba(100,200,140,.05);
+
+    color:#88d9a2;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.live .timer{
+    display:none;
+}
+
+.live .live-message{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.live-dot{
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#7ed79b;
+
+    box-shadow:0 0 12px #7ed79b;
+}
+
+/* DIVIDER */
+
+.divider{
+    width:90%;
+    max-width:1000px;
+
+    height:1px;
+
+    margin:0 auto;
+
+    background:rgba(255,255,255,.07);
+}
+
+/* FEATURES */
+
+.features{
+    padding:100px 0;
+}
+
+.section-label{
+    color:#d08db8;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.section-title{
+    margin-top:17px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        43px,
+        8vw,
+        76px
+    );
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+}
+
+.muted{
+    color:#66616a;
+}
+
+.section-text{
+    max-width:570px;
+
+    margin-top:22px;
+
+    color:#77717a;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+.cards{
+    margin-top:42px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:14px;
+}
+
+.card{
+    min-height:230px;
+
+    padding:27px;
+
+    border:1px solid rgba(255,255,255,.075);
+
+    border-radius:27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        );
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(220,145,198,.25);
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+}
+
+.number{
+    color:#5d5861;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:1.5px;
+}
+
+.card-icon{
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    color:#8a838d;
+}
+
+.card h3{
+    margin-top:52px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:23px;
+
+    letter-spacing:-1px;
+}
+
+.card p{
+    margin-top:9px;
+
+    color:#716b74;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+/* BIG STATEMENT */
+
+.statement{
+    padding:35px 0 115px;
+}
+
+.statement-line{
+    height:1px;
+
+    background:rgba(255,255,255,.07);
+
+    margin-bottom:55px;
+}
+
+.statement h2{
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        52px,
+        10vw,
+        105px
+    );
+
+    line-height:.86;
+
+    letter-spacing:-7px;
+}
+
+.statement h2 span{
+    display:block;
+
+    background:linear-gradient(
+        100deg,
+        #e9c9e2,
+        #9f8ae2
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+/* FINAL CTA */
+
 .final{
-    padding:80px 0 110px;
+    padding:0 0 90px;
 }
 
 .final-box{
-    position:relative;
-    overflow:hidden;
+    max-width:1100px;
+
+    min-height:480px;
+
+    margin:auto;
+
+    padding:60px 25px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
     text-align:center;
-    padding:90px 25px;
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:34px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    border-radius:35px;
+
     background:
-        radial-gradient(circle at 50% 0%,rgba(213,128,190,.12),transparent 45%),
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(215,125,190,.16),
+            transparent 50%
+        ),
         rgba(255,255,255,.025);
 }
 
 .final-box h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(45px,8vw,90px);
-    line-height:.95;
-    letter-spacing:-3px;
+    margin-top:15px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:clamp(
+        58px,
+        11vw,
+        105px
+    );
+
+    line-height:.82;
+
+    letter-spacing:-7px;
+}
+
+.final-box h2 span{
+    display:block;
+
+    background:linear-gradient(
+        100deg,
+        #f0d8ea,
+        #a78ee3
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
 }
 
 .final-box p{
-    color:#89838d;
-    max-width:500px;
-    margin:20px auto 30px;
-    line-height:1.7;
-    font-size:14px;
+    max-width:470px;
+
+    margin:23px auto 30px;
+
+    color:#77717a;
+
+    font-size:11px;
+
+    line-height:1.9;
 }
 
-.final-box .btn{
-    min-width:190px;
+.final-btn{
+    min-height:64px;
+    min-width:250px;
+
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:13px;
+
+    border-radius:100px;
+
+    background:linear-gradient(
+        110deg,
+        #f7ddef,
+        #c390df
+    );
+
+    color:#160d16;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:1.4px;
+
+    box-shadow:
+        0 20px 60px rgba(210,125,190,.24);
+
+    transition:.3s;
+}
+
+.final-btn:hover{
+    transform:translateY(-4px);
 }
 
 /* FOOTER */
 
 footer{
-    padding:35px 0;
-    border-top:1px solid rgba(255,255,255,.07);
+    padding:28px 0;
+
+    border-top:1px solid rgba(255,255,255,.06);
 }
 
-.footer-inner{
+.footer{
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:20px;
+    justify-content:space-between;
 }
 
-.footer-brand{
-    font-size:14px;
-    font-weight:700;
+.footer-logo{
+    font-family:"Manrope",sans-serif;
+
+    font-size:13px;
+    font-weight:800;
 }
 
-.footer-brand span{
-    color:#d78fc0;
+.footer-logo span{
+    color:#d899c4;
 }
 
-.footer-copy{
-    color:#68636b;
-    font-size:10px;
+.copy{
+    color:#4e4a52;
+
+    font-size:7px;
+
+    letter-spacing:1px;
 }
 
 .footer-link{
-    color:#aaa4ad;
-    font-size:11px;
-}
+    color:#827c85;
 
-/* REVEAL */
-
-.reveal{
-    opacity:0;
-    transform:translateY(25px);
-    transition:opacity .8s ease,transform .8s ease;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
+    font-size:8px;
+    font-weight:800;
 }
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:700px){
 
-    .hero-grid{
-        grid-template-columns:1fr;
-        gap:55px;
+    .navbar{
+        padding:11px 10px;
+    }
+
+    .nav{
+        min-height:53px;
+
+        padding-left:15px;
+    }
+
+    .logo{
+        font-size:14px;
+    }
+
+    .status{
+        display:none;
+    }
+
+    .nav-btn{
+        min-height:37px;
+
+        padding:0 15px;
+
+        font-size:7px;
     }
 
     .hero{
-        padding-top:125px;
+        min-height:auto;
+
+        padding:
+            120px 0
+            60px;
     }
-
-    .hero-visual{
-        order:-1;
-    }
-
-    .image-wrap{
-        width:280px;
-    }
-
-    .floating-badge{
-        bottom:3%;
-        left:8%;
-    }
-
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .rule-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:600px){
 
     .container{
         width:90%;
     }
 
-    nav{
-        padding:15px 0;
+    .hero h1{
+        margin-top:24px;
+
+        font-size:57px;
+
+        letter-spacing:-5px;
     }
 
-    .logo{
-        font-size:16px;
+    .description{
+        font-size:12px;
+
+        line-height:1.85;
+
+        margin-top:25px;
     }
 
-    .nav-btn{
-        padding:9px 13px;
-        font-size:10px;
-    }
-
-    .hero{
-        min-height:auto;
-        padding:120px 0 80px;
-    }
-
-    .hero-grid{
-        gap:45px;
-    }
-
-    h1{
-        font-size:56px;
-        letter-spacing:-3px;
-    }
-
-    .hero-text{
-        font-size:14px;
-        line-height:1.75;
-    }
-
-    .buttons{
+    .actions{
         flex-direction:column;
-    }
 
-    .btn{
         width:100%;
+
+        margin-top:30px;
     }
 
-    .image-wrap{
-        width:245px;
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+
+        min-width:0;
     }
 
-    .about{
-        padding:90px 0;
+    .launch{
+        font-size:6.5px;
+
+        letter-spacing:1.3px;
+    }
+
+    .orb-area{
+        width:220px;
+        height:220px;
+
+        margin-top:45px;
+    }
+
+    .orb{
+        width:125px;
+        height:125px;
+    }
+
+    .ring{
+        width:195px;
+        height:195px;
+    }
+
+    .ring2{
+        width:160px;
+        height:160px;
+    }
+
+    .countdown-section{
+        padding:
+            15px 0
+            75px;
+    }
+
+    .countdown-box{
+        padding:35px 10px;
+
+        border-radius:27px;
+    }
+
+    .countdown-box h2{
+        font-size:32px;
+
+        letter-spacing:-2px;
+    }
+
+    .date{
+        font-size:9px;
+    }
+
+    .timer{
+        gap:5px;
+
+        margin-top:27px;
+    }
+
+    .time{
+        padding:16px 3px;
+
+        border-radius:13px;
+    }
+
+    .time b{
+        font-size:23px;
+    }
+
+    .time small{
+        font-size:5px;
+    }
+
+    .features{
+        padding:75px 0;
     }
 
     .section-title{
         font-size:43px;
+
+        letter-spacing:-4px;
+    }
+
+    .section-text{
+        font-size:11px;
     }
 
     .cards{
         grid-template-columns:1fr;
-        margin-top:35px;
-    }
 
-    .card{
-        min-height:200px;
-    }
-
-    .card h3{
-        margin-top:40px;
-    }
-
-    .statement{
-        padding:50px 0 90px;
-    }
-
-    .statement-box{
-        padding:55px 10px;
-    }
-
-    .statement-box h2{
-        font-size:48px;
-    }
-
-    .countdown{
-        padding:70px 0;
-    }
-
-    .count-box{
-        padding:45px 15px;
-        border-radius:25px;
-    }
-
-    .timer{
-        gap:6px;
         margin-top:30px;
     }
 
-    .time{
-        padding:15px 5px;
-        border-radius:13px;
+    .card{
+        min-height:215px;
+
+        padding:24px;
+
+        border-radius:23px;
     }
 
-    .time span{
-        font-size:25px;
+    .card h3{
+        margin-top:45px;
+
+        font-size:21px;
     }
 
-    .time small{
-        font-size:7px;
+    .statement{
+        padding:
+            25px 0
+            85px;
     }
 
-    .rules{
-        padding:75px 0 90px;
+    .statement h2{
+        font-size:53px;
+
+        letter-spacing:-5px;
     }
 
     .final{
-        padding:40px 0 80px;
+        padding-bottom:65px;
     }
 
     .final-box{
-        padding:70px 20px;
-        border-radius:27px;
+        min-height:430px;
+
+        padding:50px 16px;
+
+        border-radius:28px;
     }
 
     .final-box h2{
-        font-size:53px;
+        font-size:59px;
+
+        letter-spacing:-5px;
     }
 
-    .footer-inner{
+    .final-box p{
+        font-size:10px;
+    }
+
+    .final-btn{
+        width:100%;
+
+        min-width:0;
+    }
+
+    .footer{
         flex-direction:column;
+
+        gap:13px;
+
         text-align:center;
     }
+}
 
+@media(max-width:360px){
+
+    .hero h1{
+        font-size:51px;
+    }
+
+    .section-title{
+        font-size:39px;
+    }
+
+    .statement h2{
+        font-size:47px;
+    }
+
+    .final-box h2{
+        font-size:52px;
+    }
 }
 
 </style>
@@ -749,25 +1233,34 @@ footer{
 
 <!-- NAV -->
 
-<nav>
-<div class="nav-inner">
+<header class="navbar">
+
+<nav class="nav">
 
 <a href="#" class="logo">
 Heart<span>Sync</span> India
 </a>
 
+<div class="nav-right">
+
+<span class="status" id="navStatus">
+COMING SOON
+</span>
+
 <a
 href="https://t.me/heartsync_india"
 target="_blank"
-rel="noopener"
 class="nav-btn">
 
-OUR PREMIUM ↗
+JOIN NOW ↗
 
 </a>
 
 </div>
+
 </nav>
+
+</header>
 
 
 <!-- HERO -->
@@ -776,62 +1269,83 @@ OUR PREMIUM ↗
 
 <div class="container">
 
-<div class="hero-grid">
+<div class="hero-content">
 
-<div class="hero-content reveal">
+<div class="badge">
 
-<div class="eyebrow">
 <span class="dot"></span>
-India's premium social community
+
+INDIA'S SOCIAL COMMUNITY
+
 </div>
 
+
 <h1>
-Find your <span>people.</span>
+
+Find your
+
+<span class="gradient">
+people.
+</span>
+
 </h1>
 
-<p class="hero-text">
-A private-feeling digital space for people who want
-better conversations, genuine connections and a
-community that actually feels human.
+
+<p class="description">
+
+A premium social space to meet new people,
+start conversations and discover connections
+that actually feel natural.
+
 </p>
 
-<div class="buttons">
+
+<div class="actions">
 
 <a
 href="https://t.me/heartsync_india"
 target="_blank"
-rel="noopener"
-class="btn primary">
+class="primary-btn"
+id="heroButton">
 
-OUR PREMIUM ↗
+JOIN HEARTSYNC
+
+<span class="arrow">
+↗
+</span>
 
 </a>
 
-<a href="#about" class="btn secondary">
-EXPLORE
+
+<a
+href="#countdown"
+class="secondary-btn">
+
+VIEW LAUNCH
+
 </a>
 
 </div>
+
 
 <div class="launch">
+
 GOING LIVE · 24 NOVEMBER 2026 · 7:00 PM IST
-</div>
 
 </div>
 
-
-<div class="hero-visual reveal">
-
-<div class="image-wrap">
-<img src="profile.jpg" alt="HeartSync India">
 </div>
 
-<div class="floating-badge">
-<strong>HeartSync India</strong>
-Made for meaningful connections
-</div>
 
-</div>
+<!-- PREMIUM ORB -->
+
+<div class="orb-area">
+
+<div class="ring"></div>
+
+<div class="ring ring2"></div>
+
+<div class="orb"></div>
 
 </div>
 
@@ -840,28 +1354,65 @@ Made for meaningful connections
 </section>
 
 
-<!-- ABOUT -->
+<!-- COUNTDOWN -->
 
-<section class="about" id="about">
+<section
+class="countdown-section"
+id="countdown">
 
 <div class="container">
 
-<div class="reveal">
+<div
+class="countdown-box"
+id="countdownBox">
 
-<div class="section-label">
-THE IDEA
+<div class="small-label">
+THE LAUNCH
 </div>
 
-<h2 class="section-title">
-More than a group.
-A place to belong.
+
+<h2>
+Something is about to start.
 </h2>
 
-<p class="section-text">
-HeartSync India is built for people who are tired of
-random noise and want a better way to discover people,
-conversations and communities that feel worth staying for.
-</p>
+
+<div class="date">
+24 NOVEMBER 2026 · 7:00 PM IST
+</div>
+
+
+<div class="timer">
+
+<div class="time">
+<b id="days">00</b>
+<small>DAYS</small>
+</div>
+
+<div class="time">
+<b id="hours">00</b>
+<small>HOURS</small>
+</div>
+
+<div class="time">
+<b id="minutes">00</b>
+<small>MINUTES</small>
+</div>
+
+<div class="time">
+<b id="seconds">00</b>
+<small>SECONDS</small>
+</div>
+
+</div>
+
+
+<div class="live-message">
+
+<span class="live-dot"></span>
+
+HEARTSYNC IS NOW LIVE
+
+</div>
 
 </div>
 
@@ -870,85 +1421,156 @@ conversations and communities that feel worth staying for.
 </section>
 
 
-<!-- EXPERIENCE -->
+<div class="divider"></div>
 
-<section class="experience">
+
+<!-- FEATURES -->
+
+<section class="features">
 
 <div class="container">
 
-<div class="section-label reveal">
+<div class="section-label">
 THE EXPERIENCE
 </div>
 
+
+<h2 class="section-title">
+
+Meet.
+
+Talk.
+
+<span class="muted">
+Connect.
+</span>
+
+</h2>
+
+
+<p class="section-text">
+
+HeartSync is built for conversations,
+new people and genuine community energy.
+No complicated setup. Just people,
+connections and good vibes.
+
+</p>
+
+
 <div class="cards">
 
-<div class="card reveal">
 
-<div class="card-number">
-01
+<div class="card">
+
+<div class="card-top">
+
+<span class="number">
+01 — MEET
+</span>
+
+<span class="card-icon">
+↗
+</span>
+
 </div>
 
+
 <h3>
-Meet
+Meet new people.
 </h3>
 
+
 <p>
-Discover people with different personalities,
-stories and interests.
+Discover personalities, interests
+and people from across India.
 </p>
 
 </div>
 
 
-<div class="card reveal">
 
-<div class="card-number">
-02
+<div class="card">
+
+<div class="card-top">
+
+<span class="number">
+02 — TALK
+</span>
+
+<span class="card-icon">
+↗
+</span>
+
 </div>
 
+
 <h3>
-Connect
+Start talking.
 </h3>
 
+
 <p>
-Start conversations without the pressure
-of making everything complicated.
+One message can become
+a conversation worth having.
 </p>
 
 </div>
 
 
-<div class="card reveal">
 
-<div class="card-number">
-03
+<div class="card">
+
+<div class="card-top">
+
+<span class="number">
+03 — VIBE
+</span>
+
+<span class="card-icon">
+↗
+</span>
+
 </div>
 
+
 <h3>
-Discover
+Find your vibe.
 </h3>
 
+
 <p>
-Find communities, conversations and
-experiences that match your vibe.
+Find people and conversations
+that match your energy.
 </p>
 
 </div>
 
 
-<div class="card reveal">
 
-<div class="card-number">
-04
+<div class="card">
+
+<div class="card-top">
+
+<span class="number">
+04 — BELONG
+</span>
+
+<span class="card-icon">
+↗
+</span>
+
 </div>
 
+
 <h3>
-Stay
+Stay for the people.
 </h3>
 
+
 <p>
-Build real connections and become part
-of something bigger than a random group.
+The goal isn't collecting members.
+It's building a community.
 </p>
 
 </div>
@@ -966,142 +1588,18 @@ of something bigger than a random group.
 
 <div class="container">
 
-<div class="statement-box reveal">
+<div class="statement-line"></div>
+
 
 <h2>
-Less noise.<br>
-More <span>connection.</span>
+
+Your people
+
+<span>
+are out there.
+</span>
+
 </h2>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COUNTDOWN -->
-
-<section class="countdown">
-
-<div class="container">
-
-<div class="count-box reveal">
-
-<div class="section-label">
-THE COUNTDOWN
-</div>
-
-<h2>
-We go live at 7.
-</h2>
-
-<p>
-24 November 2026 · 7:00 PM · IST
-</p>
-
-
-<div class="timer">
-
-<div class="time">
-<span id="days">00</span>
-<small>Days</small>
-</div>
-
-<div class="time">
-<span id="hours">00</span>
-<small>Hours</small>
-</div>
-
-<div class="time">
-<span id="minutes">00</span>
-<small>Minutes</small>
-</div>
-
-<div class="time">
-<span id="seconds">00</span>
-<small>Seconds</small>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COMMUNITY CODE -->
-
-<section class="rules">
-
-<div class="container">
-
-<div class="reveal">
-
-<div class="section-label">
-COMMUNITY CODE
-</div>
-
-<h2 class="section-title">
-Keep it real.
-Keep it respectful.
-</h2>
-
-</div>
-
-
-<div class="rule-grid">
-
-<div class="rule reveal">
-
-<span>01</span>
-
-<h3>
-Respect everyone
-</h3>
-
-<p>
-Different personalities and opinions are welcome.
-Respect is non-negotiable.
-</p>
-
-</div>
-
-
-<div class="rule reveal">
-
-<span>02</span>
-
-<h3>
-No unnecessary drama
-</h3>
-
-<p>
-We're here for conversations, connections
-and good energy — not chaos.
-</p>
-
-</div>
-
-
-<div class="rule reveal">
-
-<span>03</span>
-
-<h3>
-Be yourself
-</h3>
-
-<p>
-You don't need to pretend to fit in.
-Your personality is the point.
-</p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -1114,153 +1612,4 @@ Your personality is the point.
 
 <div class="container">
 
-<div class="final-box reveal">
-
-<div class="section-label">
-HEARTSYNC INDIA
-</div>
-
-<h2>
-See you<br>
-inside.
-</h2>
-
-<p>
-The doors open on 24 November.
-Join the community and be there from day one.
-</p>
-
-<a
-href="https://t.me/heartsync_india"
-target="_blank"
-rel="noopener"
-class="btn primary">
-
-OUR PREMIUM ↗
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-inner">
-
-<div class="footer-brand">
-Heart<span>Sync</span> India
-</div>
-
-<div class="footer-copy">
-© 2026 HeartSync India
-</div>
-
-<a
-href="https://t.me/heartsync_india_co"
-target="_blank"
-rel="noopener"
-class="footer-link">
-
-Telegram Community ↗
-
-</a>
-
-</div>
-
-</div>
-
-</footer>
-
-
-<script>
-
-/* COUNTDOWN */
-
-const launchDate =
-new Date("2026-11-24T19:00:00+05:30").getTime();
-
-function updateCountdown(){
-
-    const now = new Date().getTime();
-
-    const distance = launchDate - now;
-
-    if(distance <= 0){
-
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
-
-        return;
-    }
-
-    const days = Math.floor(
-        distance / (1000 * 60 * 60 * 24)
-    );
-
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
-
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
-
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
-
-    document.getElementById("days").innerText =
-        String(days).padStart(2,"0");
-
-    document.getElementById("hours").innerText =
-        String(hours).padStart(2,"0");
-
-    document.getElementById("minutes").innerText =
-        String(minutes).padStart(2,"0");
-
-    document.getElementById("seconds").innerText =
-        String(seconds).padStart(2,"0");
-}
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
-
-/* SCROLL REVEAL */
-
-const observer =
-new IntersectionObserver(
-(entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-},
-{
-    threshold:.12
-}
-);
-
-document
-.querySelectorAll(".reveal")
-.forEach(el=>observer.observe(el));
-
-</script>
-
-</body>
-  </html>
+<div c
